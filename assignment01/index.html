@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sunbeam Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        table {
+            margin: auto;
+        }
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+        input, textarea, select {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo Section -->
+    <div class="container">
+        <img src="https://www.sunbeaminfo.com/img/new/sunbeamnewactslogo.png" width="250">
+        <h1>Sunbeam Registration Form</h1>
+
+        <table>
+            <tr>
+                <!-- Left Side: Embedded Video -->
+                <td>
+                    <iframe width="520" height="300"
+                        src="https://www.youtube.com/embed/BFXYYoCgQzs"
+                        frameborder="0" allowfullscreen>
+                    </iframe>
+                </td>
+
+                <!-- Right Side: Registration Form -->
+                <td>
+                    <form>
+
+                        Name:<br>
+                        <input type="text" name="name"><br><br>
+
+                        BirthDate:<br>
+                        <input type="date" name="bdate"><br><br>
+
+                        Email:<br>
+                        <input type="email" name="email"><br><br>
+
+                        Password:<br>
+                        <input type="password" name="password"><br><br>
+
+                        Address:<br>
+                        <textarea rows="5" cols="25">
+Sunbeam Institute of IT
+'Anuda Chambers', 203
+Shaniwar Peth, Near Gujar Hospital,
+Karad-415110 (Maharashtra)
+                        </textarea>
+                        <br><br>
+
+                        Gender:<br>
+                        <input type="radio" name="gender"> Male
+                        <input type="radio" name="gender"> Female
+                        <br><br>
+
+                        Upload Photo:<br>
+                        <input type="file" name="photo"><br><br>
+
+                        Select your Course:<br>
+                        <select>
+                            <option>Select course</option>
+                            <option>Java</option>
+                            <option>CPP</option>
+                            <option>OS</option>
+                            <option>Web Development</option>
+                        </select>
+                        <br><br>
+
+                        Skill Set:<br>
+                        <input type="checkbox"> Java
+                        <input type="checkbox"> CPP
+                        <input type="checkbox"> OS
+                        <br><br>
+
+                        <button type="submit">Register</button>
+                        <button type="reset">Clear</button>
+
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
