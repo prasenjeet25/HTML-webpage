@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login & Registration - Design 2</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+      background: white;
+      width: 320px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      margin: 10px;
+    }
+    h2 { text-align: center; }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      background: #2575fc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .error { color: red; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Login</h2>
+  <input type="text" id="le" placeholder="Email">
+  <div id="lee" class="error"></div>
+
+  <input type="password" id="lp" placeholder="Password">
+  <div id="lpe" class="error"></div>
+
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="box">
+  <h2>Register</h2>
+  <input type="text" id="rn" placeholder="Name">
+  <div id="rne" class="error"></div>
+
+  <input type="text" id="re" placeholder="Email">
+  <div id="ree" class="error"></div>
+
+  <input type="text" id="rp" placeholder="Phone">
+  <div id="rpe" class="error"></div>
+
+  <input type="password" id="rpa" placeholder="Password">
+  <div id="rpae" class="error"></div>
+
+  <button onclick="register()">Register</button>
+</div>
+
+<script>
+function login() {
+  lee.innerHTML = lpe.innerHTML = "";
+  let ok = true;
+
+  if (le.value == "") { lee.innerHTML = "Email required"; ok = false; }
+  if (lp.value.length < 6) { lpe.innerHTML = "Min 6 characters"; ok = false; }
+
+  if (ok) alert("Login Successful");
+}
+
+function register() {
+  rne.innerHTML = ree.innerHTML = rpe.innerHTML = rpae.innerHTML = "";
+  let ok = true;
+
+  if (rn.value == "") { rne.innerHTML = "Name required"; ok = false; }
+  if (re.value == "") { ree.innerHTML = "Email required"; ok = false; }
+  if (!/^[0-9]{10}$/.test(rp.value)) { rpe.innerHTML = "10 digits only"; ok = false; }
+  if (rpa.value.length < 6) { rpae.innerHTML = "Min 6 characters"; ok = false; }
+
+  if (ok) alert("Registration Successful");
+}
+</script>
+
+</body>
+</html>
